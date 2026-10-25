@@ -1,0 +1,12 @@
+{% for stop, connections  in data %}
+    <div class="mmm-abfahrten-column">
+        <div class="mmm-abfahrten-title">{{ stop }}</div>
+        {% for c in connections %}
+            <div class="mmm-abfahrten-container">
+                <div class="mmm-abfahrten-line" style="background-color: {{ c.color }}; color: {{ c.fontColor }};">{{ c.line }}</div>
+                <div class="mmm-abfahrten-destination">{{ c.destination }}</div>
+                <div class="mmm-abfahrten-time">{{ c.time }}'</div>
+            </div>
+        {% endfor %}
+    </div>
+{% endfor %}
